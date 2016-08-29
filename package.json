@@ -1,0 +1,14 @@
+{
+  "name": "api-rest",
+  "version": "1.0.0",
+  "description": "Proyecto de API RESTful con Node.js y Express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Carlos Azaustre (http://carlosazaustre.es)",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.14.0"
+  }
+}
