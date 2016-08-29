@@ -4,11 +4,16 @@
   "description": "Proyecto de API RESTful con Node.js y Express",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Carlos Azaustre (http://carlosazaustre.es)",
   "license": "MIT",
   "dependencies": {
+    "body-parser": "^1.15.2",
     "express": "^4.14.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.10.2"
   }
 }
