@@ -10,8 +10,13 @@
   "author": "Carlos Azaustre (http://carlosazaustre.es)",
   "license": "MIT",
   "dependencies": {
+    "bcrypt-nodejs": "0.0.3",
     "body-parser": "^1.15.2",
-    "express": "^4.14.0"
+    "crypto": "0.0.3",
+    "express": "^4.14.0",
+    "jwt-simple": "^0.5.1",
+    "moment": "^2.16.0",
+    "mongoose": "^4.6.0"
   },
   "devDependencies": {
     "nodemon": "^1.10.2"
