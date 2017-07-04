@@ -1,24 +1,35 @@
-<form id="login" method="post">
-  <input type="email" name="email" value="" placeholder="Tu Email">
-  <br><br>
-  <input type="password" name="password" value="" placeholder="Tu Contraseña">
-  <br><br>
-  <input type="submit" value="Login">
+<form id="login" method="POST">
+  <p>
+    <input type="email" id="email" name="email" placeholder="Tu email" />
+  </p>
+  <p>
+    <input type="password" id="password" name="password" placeholder="Tu contraseña" />
+  </p>
+  <p>
+    <input type="submit" value="Login" />
+  </p>
 </form>
 
-<script type="text/javascript">
-  const formLogin = document.querySelector('#login')
-  const formData = new FormData(formLogin)
+<script>
+  'use strict'
 
-  formLogin.addEventListener('submit', event => {
-    event.preventDefault()
+  const formLogin = document.getElementById('login')
+
+  formLogin.addEventListener('submit', e => {
+    e.preventDefault()
     fetch('/api/signin', {
       method: 'POST',
-      body: formData
+      body: JSON.stringify({
+        email: document.getElementById('email').value,
+        password: document.getElementById('password').value
+      }),
+      headers: { 'Content-Type': 'application/json' },
+      credentials: 'same-origin'
     })
     .then(res => res.json())
     .then(data => {
       localStorage.setItem('token', data.token)
+      console.log(data)
     })
   })
 </script>
